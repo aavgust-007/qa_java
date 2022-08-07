@@ -12,14 +12,14 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
-public class Test_cat {
+public class TestСat {
     @Spy
     Feline feline = new Feline();
     @Spy
     private Predator predator;
 
     @Test
-    public void Test_getSound() {
+    public void testGetSound() {
         Cat cat = new Cat(feline);
         String sound = cat.getSound();
         String expended = "Мяу";
@@ -27,7 +27,7 @@ public class Test_cat {
     }
 
     @Test
-    public void Test_getFood() throws Exception {
+    public void testGetFood() throws Exception {
         Cat cat = new Cat(feline);
         Mockito.doReturn(List.of("Животные", "Птицы", "Рыба")).when(predator).eatMeat();
         List<String> Food = cat.getFood();

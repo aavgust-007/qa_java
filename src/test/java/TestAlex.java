@@ -7,30 +7,30 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class Test_Alex {
+public class TestAlex {
     Feline feline = new Feline();
-    Lion lion = new Lion(feline);
-    Alex alex = new Alex(lion);
-
 
     @Test
-    public void test_getFriends() {
+    public void testGetFriends() throws Exception {
+        Alex alex = new Alex();
         List<String> friend = List.of("Марти", "Глории", "Мелман");
         assertEquals(friend, alex.getFriends());
     }
 
     @Test
-    public void  test_getPlaceOfLiving() {
+    public void testGetPlaceOfLiving() throws Exception {
+        Alex alex = new Alex();
         assertEquals("Нью-Йоркский зоопарк", alex.getPlaceOfLiving());
     }
 
     @Test
-    public void  test_getKittens() {
+    public void  testGetKittens() throws Exception {
+        Alex alex = new Alex();
         assertEquals(0, alex.getKittens());
     }
 
     @Test
-    public void  test_doesHaveMane() throws Exception {
+    public void  testDoesHaveMane() throws Exception {
         Alex alex1 = new Alex();
         assertEquals(true, alex1.doesHaveMane());
     }

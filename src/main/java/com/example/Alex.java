@@ -3,15 +3,11 @@ package com.example;
 import java.util.List;
 
 public class Alex extends Lion {
-    boolean hasMane;
-    Lion lion;
 
-    public Alex(Lion lion) {
-        super(lion.feline);
-    }
 
     public Alex() throws Exception {
-        super("Самец");
+        super("Самец", feline);
+
     }
 
     public List<String> getFriends() {

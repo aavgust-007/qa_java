@@ -10,23 +10,22 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 @RunWith(MockitoJUnitRunner.class)
-public class Test_Lion {
-    boolean hasMane;
+public class TestLion {
     @Spy
     private Feline feline;
 
 
     @Test
-    public void Test_getKittens() throws Exception {
-        Lion lion = new Lion(feline) ;
+    public void testGetKittens() throws Exception {
+        Lion lion = new Lion("Самец",feline) ;
         Mockito.doReturn(5).when(feline).getKittens();
         int actualResult = lion.getKittens();
         assertEquals(5, actualResult);
     }
 
     @Test
-    public void Test_getFood() throws Exception {
-        Lion lion = new Lion(feline) ;
+    public void testGetFood() throws Exception {
+        Lion lion = new Lion("Самец",feline) ;
         Mockito.doReturn(List.of("Животные", "Птицы", "Рыба")).when(feline).getFood(Mockito.anyString());
         List<String> actualResult = lion.getFood();
         assertEquals(List.of("Животные", "Птицы", "Рыба"), actualResult);

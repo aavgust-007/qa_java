@@ -10,7 +10,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class Test_Feline {
+public class TestFeline {
     @Spy
     private Feline feline;
 
@@ -23,20 +23,20 @@ public class Test_Feline {
     }
 
     @Test
-    public void Test_getFamily() throws Exception {
+    public void testGetFamily() throws Exception {
         String actualResult = feline.getFamily();
         assertEquals("Кошачьи", actualResult);
     }
 
     @Test
-    public void Test_getKittens() throws Exception {
+    public void testGetKittens() throws Exception {
         Mockito.doReturn(1).when(feline).getKittens();
         int actualResult = feline.getKittens();
         assertEquals(1, actualResult);
     }
 
     @Test
-    public void Test_getKittensIntReturns() throws Exception {
+    public void testGetKittensIntReturns() throws Exception {
         int actualResult = feline.getKittens(5);
         assertEquals(5, actualResult);
     }

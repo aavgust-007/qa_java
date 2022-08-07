@@ -3,33 +3,29 @@
 import java.util.List;
 
 public class Alex extends Lion {
-    boolean hasMane;
-    Lion lion;
 
-    public Alex(Lion lion) {
-<span class="fc" id="L10">        super(lion.feline);</span>
-<span class="fc" id="L11">    }</span>
 
     public Alex() throws Exception {
-<span class="fc" id="L14">        super(&quot;Самец&quot;);</span>
-<span class="fc" id="L15">    }</span>
+<span class="fc" id="L9">        super(&quot;Самец&quot;, feline);</span>
+
+<span class="fc" id="L11">    }</span>
 
     public List&lt;String&gt; getFriends() {
-<span class="fc" id="L18">        return List.of(&quot;Марти&quot;, &quot;Глории&quot;, &quot;Мелман&quot;);</span>
+<span class="fc" id="L14">        return List.of(&quot;Марти&quot;, &quot;Глории&quot;, &quot;Мелман&quot;);</span>
     }
 
     public String getPlaceOfLiving() {
-<span class="fc" id="L22">        return &quot;Нью-Йоркский зоопарк&quot;;</span>
+<span class="fc" id="L18">        return &quot;Нью-Йоркский зоопарк&quot;;</span>
     }
 
     @Override
     public int getKittens() {
-<span class="fc" id="L27">        return 0;</span>
+<span class="fc" id="L23">        return 0;</span>
     }
 
     @Override
     public boolean doesHaveMane() {
-<span class="fc" id="L32">        return super.doesHaveMane();</span>
+<span class="fc" id="L28">        return super.doesHaveMane();</span>
     }
 
 }

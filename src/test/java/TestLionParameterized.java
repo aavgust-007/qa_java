@@ -12,13 +12,13 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 
-public class Test_Lion_Parameterized {
+public class TestLionParameterized {
     @Spy
     private Feline feline;
     private String sex;
     private boolean extended;
 
-    public Test_Lion_Parameterized(String sex, boolean extended) throws Exception {
+    public TestLionParameterized(String sex, boolean extended) throws Exception {
         this.sex = sex;
         this.extended = extended;
 
@@ -30,7 +30,7 @@ public class Test_Lion_Parameterized {
     }
 
     @Parameterized.Parameters
-    public static Object[][] getSumData() {
+    public static Object[][] getSex() {
         Object[][] objects = {
                 {"Самка",false},
                 {"Самец",true},
@@ -39,8 +39,8 @@ public class Test_Lion_Parameterized {
 
 
     @Test
-    public void doesHaveMane_returndoesHaveMane() throws Exception {
-       Lion lion2 = new Lion(sex);
+    public void testDoesHaveMane() throws Exception {
+       Lion lion2 = new Lion(sex, feline);
         boolean actualResult = lion2.doesHaveMane();
         assertEquals("Используйте допустимые значения пола животного - самей или самка",extended, actualResult);
     }
